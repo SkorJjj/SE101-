@@ -160,3 +160,8 @@ Multi-tasking
     - system call
     - interrupt
     - trap
+
+Scheduling
+* Managing execution time of multiple processes or threads by:
+  - Applying the process switching mechanisms on a single CPU
+  - Allowing different processes to run on multiple CPUs at the same time.
