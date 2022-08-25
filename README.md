@@ -23,5 +23,21 @@ Process
 Consists of following processes
   - Machine code :  A sequence of instructions
   - State : values of CPU registers and the contents of allocated memory
-  - acquired resources : resources from operating system and not yet released such as file descriptors
+  - acquired resources : resources from operating system and not yet released such as file descriptors, sockets, handles, memory blocks etc.
   - execution resources : resources needed to execute the code, including a process state records, CPU affinity, a priority level, accounting information, and security       configuration
+How an OS starts a process?
+* Generates a unique process identifier
+* Creates a process image:
+  - Allocated memory and copies program's segments from an executable into that memory
+  - Allocated a BSS segment with the size specified in the executable's headers and fills it with zeros
+* Updates OS' data structures:
+  - Expands accounting, auditing and billing logs
+  - Adds a process to the list of scheduled processes
+* Creates a default thread, often referred to as the main thread:
+  - Creates a stack segment for the thread with the size as specified in the excutable's headers
+  - Adds the thread to the OS list of threads for the current process
+
+Daemon
+* Leverages multitasking -runs in a background by design
+* Can run without any human user being logged on to the system
+
