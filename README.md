@@ -65,6 +65,7 @@ int main(void)
 {
     return 0;
 }
+
 [narendra@CentOS]$ gcc memory-layout.c -o memory-layout
 [narendra@CentOS]$ size memory-layout
 text       data        bss        dec        hex    filename
@@ -81,6 +82,7 @@ int main(void)
 {
     return 0;
 }
+
 [narendra@CentOS]$ gcc memory-layout.c -o memory-layout
 [narendra@CentOS]$ size memory-layout
 text       data        bss        dec        hex    filename
@@ -98,6 +100,7 @@ int main(void)
     static int i; /* Uninitialized static variable stored in bss */
     return 0;
 }
+
 [narendra@CentOS]$ gcc memory-layout.c -o memory-layout
 [narendra@CentOS]$ size memory-layout
 text       data        bss        dec        hex    filename
@@ -115,6 +118,7 @@ int main(void)
     static int i = 100; /* Initialized static variable stored in DS*/
     return 0;
 }
+
 [narendra@CentOS]$ gcc memory-layout.c -o memory-layout
 [narendra@CentOS]$ size memory-layout
 text       data        bss        dec        hex    filename
@@ -132,6 +136,7 @@ int main(void)
     static int i = 100; /* Initialized static variable stored in DS*/
     return 0;
 }
+
 [narendra@CentOS]$ gcc memory-layout.c -o memory-layout
 [narendra@CentOS]$ size memory-layout
 text       data        bss        dec        hex    filename
