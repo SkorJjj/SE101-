@@ -37,6 +37,7 @@ How an OS starts a process?
   - Creates a stack segment for the thread with the size as specified in the excutable's headers
   - Adds the thread to the OS list of threads for the current process
 
+
 Daemon
 * Leverages multitasking -runs in a background by design
 * Can run without any human user being logged on to the system
